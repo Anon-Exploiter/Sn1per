@@ -1,0 +1,22 @@
+name: Installation of Sn1per
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run the installation script
+        run: bash install.sh
+
+      - name: Verify the installation via running of Sn1per
+        run: |
+          echo Running sn1per
+          ./sniper
