@@ -102,9 +102,8 @@ apt-get install -y adb
 apt-get install -y xsltproc
 apt-get install -y ldapscripts
 apt-get install -y libssl-dev 2> /dev/null
-apt-get install -y python-pip 2> /dev/null
-apt-get remove -y python3-pip
 apt-get install -y python3-pip
+apt-get install -y python3-setuptools
 apt-get install -y xmlstarlet
 apt-get install -y net-tools
 apt-get install -y p7zip-full
@@ -177,7 +176,6 @@ pip3 install -r $PLUGINS_DIR/gitGraber/requirements.txt
 pip3 install -r $PLUGINS_DIR/censys-subdomain-finder/requirements.txt
 pip3 install -r $PLUGINS_DIR/dnscan/requirements.txt 
 pip3 install py-altdns
-cd ..
 cd massdns
 make && make install
 cd ..
